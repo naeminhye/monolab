@@ -13,14 +13,14 @@ npm install --save monolab
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'monolab'
+import { Button } from 'monolab'
 import 'monolab/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <Button />
   }
 }
 ```

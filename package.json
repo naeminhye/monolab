@@ -4,7 +4,7 @@
   "description": "React UI Components by Monolab",
   "author": "naeminhye",
   "license": "MIT",
-  "repository": "naeminhye/monolab",
+  "repository": "https://github.com/naeminhye/monolab",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.ts",
