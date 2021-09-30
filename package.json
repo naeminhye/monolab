@@ -1,6 +1,6 @@
 {
-  "name": "monolab",
-  "version": "1.0.0",
+  "name": "@monolab/react-mono",
+  "version": "1.0.0-alpha",
   "description": "React UI Components by Monolab",
   "author": "naeminhye",
   "license": "MIT",
