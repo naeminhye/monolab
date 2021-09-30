@@ -1,4 +1,4 @@
-# monolab
+# @monolab/react-mono
 
 > React UI Components by Monolab
 
@@ -7,22 +7,8 @@
 ## Install
 
 ```bash
-npm install --save monolab
-```
-
-## Usage
-
-```tsx
-import React from 'react'
-
-import { Button } from 'monolab'
-import 'monolab/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <Button />
-  }
-}
+npm install --save @monolab/react-mono
+// or yarn add @monolab/react-mono
 ```
 
 ## License
