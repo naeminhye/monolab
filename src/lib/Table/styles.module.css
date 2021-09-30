@@ -1,0 +1,72 @@
+.mono__table--container {
+  overflow-x: auto;
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+.mono__table--container .mono__table {
+  font-family: Inconsolata, Montserrat, Arial;
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+  display: table;
+  box-sizing: border-box;
+  display: table;
+}
+.mono__table--container .mono__table--td,
+.mono__table--container .mono__table--th {
+  padding: 8px;
+  display: table-cell;
+}
+.mono__table--container .mono__table--th .mono__table--sort-icon {
+  float: right;
+  cursor: pointer;
+}
+.mono__table--container .mono__table--td-left {
+  text-align: left;
+}
+.mono__table--container .mono__table--td-center {
+  text-align: center;
+}
+.mono__table--container .mono__table--td-right {
+  text-align: right;
+}
+.mono__table--container .mono__table.bordered {
+  border: 1px solid #aeaeae;
+  border-collapse: collapse;
+}
+.mono__table--container .mono__table.bordered .mono__table--td,
+.mono__table--container .mono__table.bordered .mono__table--th {
+  border: 1px solid #aeaeae;
+}
+.mono__table--container
+  .mono__table.striped
+  .mono__table--body.mono__table--tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+.mono__table--container .mono__table.separated {
+  border-collapse: separate;
+}
+.mono__table--container .mono__table--head .checkbox {
+  width: fit-content;
+}
+.mono__table--container .mono__table--body .checkbox {
+  width: fit-content;
+  text-align: center;
+}
+.mono__table--container .mono__table--tr {
+  display: table-row;
+}
+.mono__table--extra {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.mono__table--extra-selected-count {
+  font-family: Inconsolata, Montserrat, Arial;
+}
+.mono__table--extra ul {
+  flex: 1;
+}
+.table-cell-loader {
+  padding: 0;
+}
