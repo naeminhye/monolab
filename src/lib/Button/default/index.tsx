@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-import styles from './styles.module.css'
+import styles from '../styles.module.css'
 
 type StatusType =
   | 'default'
