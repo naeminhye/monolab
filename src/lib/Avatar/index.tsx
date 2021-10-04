@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 import styles from './styles.module.css'
 
-export type AvatarBorderProps = {
+type AvatarBorderProps = {
   border: string
   borderStyle:
     | 'dotted'
@@ -17,15 +17,15 @@ export type AvatarBorderProps = {
   borderWidth: string
   borderColor: string
 }
-export type AvatarProps = {
+type AvatarProps = {
   src: string
-  className?: string
-  size?: 'xs' | 'sm' | 'md' | 'lg'
+  size?: 'xs' | 'sm' | 'md' | 'lg' | number
   shape?: 'circle' | 'square'
   alt?: string
-  style?: any
   bordered?: boolean
   borderStyle?: AvatarBorderProps
+  className?: string
+  style?: React.CSSProperties
 }
 
 const Avatar = (props: AvatarProps) => {
@@ -40,19 +40,18 @@ const Avatar = (props: AvatarProps) => {
     borderStyle
   } = props
 
-  const classes = classNames({
+  const classes = classNames(className, {
     [styles.mono__avatar]: true,
-    [className || '']: className || '',
     [styles[`mono__avatar--${size}`]]:
       size && typeof size === 'string' && size !== 'md',
     [styles[`mono__avatar--${shape}`]]: shape && shape !== 'circle',
     [styles.bordered]: bordered
   })
 
-  const imageStyles = {
-    width: typeof size === 'number' && size + 'px',
-    height: typeof size === 'number' && size + 'px',
-    lineHeight: typeof size === 'number' && size + 'px',
+  const imageStyles: React.CSSProperties = {
+    width: typeof size === 'number' ? `${size}px` : '40px',
+    height: typeof size === 'number' ? `${size}px` : '40px',
+    lineHeight: typeof size === 'number' ? `${size}px` : '40px',
     ...style
   }
 
@@ -69,4 +68,5 @@ const Avatar = (props: AvatarProps) => {
   )
 }
 
+export { Avatar, AvatarProps, AvatarBorderProps }
 export default Avatar

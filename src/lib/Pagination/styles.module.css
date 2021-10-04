@@ -1,0 +1,38 @@
+.mono__pagination {
+  font-family: Inconsolata, Montserrat, Arial;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+.mono__pagination--item {
+  cursor: pointer;
+  border: 1px solid transparent;
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  padding: 0;
+  text-align: center;
+  width: 32px;
+  border-radius: 150px;
+  margin: 1px 3px;
+}
+.mono__pagination--item:focus {
+  outline: none;
+}
+.mono__pagination--item-prev svg,
+.mono__pagination--item-next svg {
+  vertical-align: middle;
+}
+.mono__pagination--item:hover:not(.mono__pagination--item-prev):not(.mono__pagination--item-next) {
+  background-color: #aeaeae;
+  color: #363636;
+  border-color: #aeaeae;
+}
+.mono__pagination--item-active {
+  background-color: #0a3961;
+  color: #fff;
+  border-color: #0a3961;
+}

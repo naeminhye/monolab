@@ -1,7 +1,7 @@
-import Avatar from './lib/Avatar'
-import CheckBox from './lib/CheckBox'
-import Tree from './lib/Tree'
-// TODO: update icons
-import * as Icons from './lib/icons'
-
-export { Avatar, CheckBox, Tree, Icons }
+export * from './lib/Avatar'
+export * from './lib/Button'
+export * from './lib/CheckBox'
+export * from './lib/Pagination'
+export * from './lib/Table'
+export * from './lib/Tree'
+export * as Icons from './lib/icons'

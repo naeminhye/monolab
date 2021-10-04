@@ -1,0 +1,12 @@
+.mono__no-data {
+  font-family: Inconsolata, Montserrat, Arial;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #aeaeae;
+}
+
+.mono__no-data--text {
+  margin-top: 8px;
+}

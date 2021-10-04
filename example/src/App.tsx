@@ -1,7 +1,8 @@
 import React from 'react'
 
-import { Tree } from 'monolab'
 import 'monolab/dist/index.css'
+import { Tree } from 'monolab'
+import TableExample from './TableExample'
 
 // Sample Tree dataSource
 const x = 3
@@ -43,6 +44,7 @@ const App = () => {
         multiple
         checkable
       />
+      <TableExample />
     </div>
   )
 }

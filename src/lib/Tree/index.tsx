@@ -248,12 +248,12 @@ const SingleTree = ({ value, title, children, ...others }: SingleTreeProps) => {
   )
 }
 
-export type TreeNodeProps = {
+type TreeNodeProps = {
   value: string
   title: string
   children?: any
 }
-export type TreeProps = {
+type TreeProps = {
   dataSource: Array<TreeNodeProps>
   className?: string
   itemClassName?: string
@@ -313,4 +313,5 @@ const Tree = ({
   )
 }
 
+export { Tree, TreeNodeProps, TreeProps }
 export default Tree

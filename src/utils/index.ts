@@ -18,3 +18,9 @@ export const recursiveSearch = (
 export const generateUniqueKey = (prefix: string): string => {
   return `${prefix}_${new Date().getTime()}`
 }
+
+export const getNumOfPgs = (total: number, size: number) => {
+  return total % size > 0
+    ? Math.floor(total / size) + 1
+    : Math.floor(total / size)
+}

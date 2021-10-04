@@ -1,5 +1,5 @@
 {
-  "name": "@naeminhye/react-mono",
+  "name": "@monolab-ui/core",
   "version": "1.0.0-alpha",
   "description": "React UI Components by Monolab",
   "author": "naeminhye",
@@ -61,6 +61,7 @@
     "dist"
   ],
   "dependencies": {
-    "classnames": "^2.3.1"
+    "classnames": "^2.3.1",
+    "moment": "^2.29.1"
   }
 }

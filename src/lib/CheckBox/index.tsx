@@ -3,35 +3,48 @@ import classNames from 'classnames'
 
 import styles from './styles.module.css'
 
-export type CheckBoxProps = {
-  children?: any
-  className?: string
+type InputProps = React.HTMLAttributes<HTMLInputElement>
+
+type CheckBoxProps = Omit<
+  InputProps,
+  'onChange' | 'checked' | 'className' | 'style'
+> & {
   halfCheck?: boolean
   label?: string
-  defaultChecked?: boolean
-  onChange: any
+  onChange: (checked: boolean) => void
   checked: boolean
+  className?: string
+  style?: React.CSSProperties
 }
 
 const CheckBox = (props: CheckBoxProps) => {
   const {
-    children,
-    className = '',
+    className,
     halfCheck = false,
     label,
-    // defaultChecked = false,
-    ...others
+    style,
+    onChange,
+    checked,
+    ...inputProps
   } = props
 
-  const classes = classNames({
+  const handleCheck = () => {
+    onChange(!checked)
+  }
+
+  const classes = classNames(className, {
     [styles.mono__checkbox]: true,
-    [styles.notall]: halfCheck,
-    [className]: className
+    [styles.notall]: halfCheck
   })
 
   return (
-    <div className={classes}>
-      <input type='checkbox' {...others} />
+    <div className={classes} style={style}>
+      <input
+        {...inputProps}
+        defaultChecked={checked}
+        onChange={handleCheck}
+        type='checkbox'
+      />
       {label && (
         <span className={styles['mono__checkbox--label']}>{label}</span>
       )}
@@ -39,4 +52,5 @@ const CheckBox = (props: CheckBoxProps) => {
   )
 }
 
+export { CheckBox, CheckBoxProps }
 export default CheckBox

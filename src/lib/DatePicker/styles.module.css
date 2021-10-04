@@ -1,0 +1,135 @@
+.mono__datepicker--wrapper {
+  font-family: Inconsolata, Montserrat, Arial;
+  position: relative;
+}
+.mono__datepicker--wrapper .mono__calendar {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  background-color: white;
+  top: 54px;
+}
+.mono__datepicker--wrapper.open .mono__calendar {
+  display: block;
+  border: 1px solid #aeaeae;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.mono__datepicker--wrapper.open .mono__calendar--months {
+  display: flex;
+  justify-content: space-between;
+  height: 24px;
+  align-items: center;
+  padding: 8px 16px;
+}
+.mono__datepicker--wrapper.open .mono__calendar--months-current {
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 4px 10px;
+  color: #aeaeae;
+}
+.mono__datepicker--wrapper.open .mono__calendar--months-current:hover {
+  background-color: #aeaeae;
+  color: #363636;
+  border-color: #aeaeae;
+}
+.mono__datepicker--wrapper.open .mono__calendar--months-current-month {
+  color: #363636;
+  margin: 0 2px;
+}
+.mono__datepicker--wrapper.open .mono__calendar--months-current-year {
+  margin: 0 2px;
+}
+.mono__datepicker--wrapper.open .mono__calendar--months-next-month,
+.mono__datepicker--wrapper.open .mono__calendar--months-prev-month {
+  cursor: pointer;
+}
+.mono__datepicker--wrapper.open .mono__calendar--content {
+  min-width: 300px;
+  min-height: 240px;
+}
+.mono__datepicker--wrapper.open .mono__calendar--content-by-days {
+  min-width: inherit;
+  min-height: inherit;
+}
+.mono__datepicker--wrapper.open .mono__calendar--content-by-days th {
+  text-align: center;
+  padding: 5px;
+  font-weight: 700;
+  color: #999;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.mono__datepicker--wrapper.open .mono__calendar--content-by-days .slot {
+  cursor: pointer;
+}
+.mono__datepicker--wrapper.open
+  .mono__calendar--content-by-days
+  .slot
+  .mono__calendar--day {
+  border: 1px solid transparent;
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  padding: 0;
+  text-align: center;
+  width: 32px;
+  border-radius: 150px;
+  margin: 1px;
+}
+.mono__datepicker--wrapper.open
+  .mono__calendar--content-by-days
+  .slot
+  .mono__calendar--day:hover {
+  background-color: #aeaeae;
+  color: #363636;
+  border-color: #aeaeae;
+}
+.mono__datepicker--wrapper.open
+  .mono__calendar--content-by-days
+  .slot.selected
+  .mono__calendar--day {
+  background-color: #0a3961;
+  color: #fff;
+  border-color: #0a3961;
+}
+.mono__datepicker--wrapper.open
+  .mono__calendar--content-by-days
+  .slot.today
+  .mono__calendar--day {
+  border-color: #0a3961;
+}
+.mono__datepicker--wrapper.open .mono__calendar--content-by-months {
+  width: 300px;
+  height: 240px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.mono__datepicker--wrapper.open .mono__calendar--content-by-months .item {
+  position: relative;
+  flex: 1 0 25%;
+  font-size: 14px;
+  line-height: 75px;
+  height: 75px;
+  margin-bottom: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+.mono__datepicker--wrapper.open .mono__calendar--content-by-months .item:hover {
+  background-color: #aeaeae;
+  color: #363636;
+  border-color: #aeaeae;
+}
+.mono__datepicker--wrapper.open
+  .mono__calendar--content-by-months
+  .item.selected {
+  background-color: #0a3961;
+  color: #fff;
+  border-color: #0a3961;
+}

@@ -1,0 +1,106 @@
+.mono__dropdown {
+  font-family: Inconsolata, Montserrat, Arial;
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #363636;
+  /** sizes */
+}
+.mono__dropdown--size-xs .mono__dropdown--input-text {
+  line-height: 32px;
+}
+.mono__dropdown--size-xs .mono__dropdown__list {
+  top: 30px;
+}
+.mono__dropdown--size-sm {
+  line-height: 36px;
+}
+.mono__dropdown--size-lg {
+  line-height: 48px;
+}
+.mono__dropdown--current {
+  position: relative;
+  border: 1px solid #aeaeae;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  display: flex;
+}
+.mono__dropdown--current:focus {
+  border: 1px solid #0f4c81;
+}
+.mono__dropdown--current:focus + .mono__dropdown__list {
+  opacity: 1;
+  animation-name: none;
+}
+.mono__dropdown--current:focus + .mono__dropdown__list .mono__dropdown--option {
+  cursor: pointer;
+}
+.mono__dropdown--current:focus .mono__dropdown__icon {
+  transform: translateY(-50%) rotate(180deg);
+}
+.mono__dropdown__icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 20px;
+  opacity: 0.3;
+  transition: 0.2s ease;
+}
+.mono__dropdown--input {
+  display: none;
+}
+.mono__dropdown--input:checked + .mono__dropdown--input-text {
+  display: block;
+}
+.mono__dropdown--input-text {
+  display: none;
+  width: 100%;
+  margin: 0;
+  padding: 0 15px;
+  line-height: 46px;
+}
+.mono__dropdown__list {
+  border: 1px solid #aeaeae;
+  position: absolute;
+  top: 48px;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  width: 99.6%;
+  overflow-y: auto;
+  max-height: 244px;
+  animation-name: HideList;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: step-start;
+}
+.mono__dropdown__list li:not(:last-child) {
+  border-bottom: 1px solid #aeaeae;
+}
+.mono__dropdown--option {
+  display: block;
+  padding: 15px;
+  background-color: #fff;
+}
+.mono__dropdown--option:hover,
+.mono__dropdown--option:focus {
+  color: #0a3961;
+  background-color: #9fb7cd;
+}
+@keyframes HideList {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}

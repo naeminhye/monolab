@@ -1,0 +1,88 @@
+.mono__input--wrapper {
+  position: relative;
+  font-family: Inconsolata, Montserrat, Arial;
+}
+.mono__input--wrapper .mono__input {
+  font-family: Inconsolata, Montserrat, Arial;
+  padding: 0 15px;
+  font-size: 18px;
+  height: 48px;
+  min-width: 200px;
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background-color: #e5e5e5;
+  border: none;
+}
+.mono__input--wrapper .mono__input:focus {
+  border: 1px solid #9fb7cd;
+}
+.mono__input--wrapper .mono__input.bordered {
+  border: 1px solid #aeaeae;
+  background-color: #fff;
+}
+.mono__input--wrapper .mono__input.bordered:focus {
+  border: 1px solid #0f4c81;
+}
+.mono__input--wrapper .mono__input--disabled {
+  background-color: #e5e5e5;
+  color: #aeaeae;
+  cursor: not-allowed;
+}
+.mono__input--wrapper .mono__input--prefix {
+  position: absolute;
+  top: 25%;
+  left: 10px;
+}
+.mono__input--wrapper .mono__input--suffix {
+  position: absolute;
+  top: 25%;
+  right: 10px;
+}
+.mono__textarea--wrapper {
+  font-family: Inconsolata, Montserrat, Arial;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.mono__textarea--wrapper .mono__textarea {
+  font-family: inherit;
+  padding: 15px;
+  font-size: 18px;
+  line-height: 18px;
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background-color: #e5e5e5;
+  border: none;
+}
+.mono__textarea--wrapper .mono__textarea:focus {
+  border: 1px solid #9fb7cd;
+}
+.mono__textarea--wrapper .mono__textarea.bordered {
+  border: 1px solid #aeaeae;
+  background-color: #fff;
+}
+.mono__textarea--wrapper .mono__textarea.bordered:focus {
+  border: 1px solid #0f4c81;
+}
+.mono__textarea--wrapper .mono__textarea--disabled {
+  background-color: #e5e5e5;
+  color: #aeaeae;
+  cursor: not-allowed;
+}
+.mono__input--clear-icon {
+  color: rgba(0, 0, 0, 0.25);
+  font-size: 12px;
+  cursor: pointer;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 8px 8px 0 0;
+}

@@ -1,0 +1,124 @@
+.mono__btn {
+  height: 42px;
+  min-width: 160px;
+  max-width: 100%;
+  border: none;
+  border-radius: 0;
+  background-color: #aeaeae;
+  transition: 0.3s;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+}
+.mono__btn--size-xs {
+  height: 32px;
+  min-width: 140px;
+}
+.mono__btn--size-xs .mono__btn__content {
+  font-size: 14px;
+}
+.mono__btn--size-sm {
+  height: 36px;
+  min-width: 140px;
+}
+.mono__btn--size-sm .mono__btn__content {
+  font-size: 16px;
+}
+.mono__btn--size-lg {
+  height: 48px;
+  min-width: 200px;
+}
+.mono__btn:focus {
+  outline: none;
+}
+.mono__btn:hover {
+  background-color: #888;
+}
+.mono__btn:active {
+  background-color: #888;
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+}
+.mono__btn__icon {
+  position: absolute;
+  left: 10px;
+}
+.mono__btn__content {
+  color: #363636;
+  font-weight: 600;
+  font-family: Inconsolata, Montserrat, Arial;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+.mono__btn--type-primary {
+  background-color: #0f4c81;
+}
+.mono__btn--type-primary .mono__btn__content {
+  color: #fff;
+}
+.mono__btn--type-primary:hover {
+  background-color: #0a3961;
+}
+.mono__btn--type-primary:active {
+  background-color: #0a3961;
+}
+.mono__btn--type-danger {
+  background-color: #b40800;
+}
+.mono__btn--type-danger .mono__btn__content {
+  color: #fff;
+}
+.mono__btn--type-danger:hover {
+  background-color: #8f0700;
+}
+.mono__btn--type-danger:active {
+  background-color: #8f0700;
+}
+.mono__btn--shape-round {
+  border-radius: 50px;
+}
+.mono__btn--disabled {
+  cursor: not-allowed;
+  background-color: #e5e5e5;
+}
+.mono__btn--disabled .mono__btn__content {
+  color: #aeaeae;
+}
+.mono__btn--disabled:hover {
+  background-color: #e5e5e5;
+}
+.mono__icon-btn {
+  min-width: unset;
+  height: 42px;
+  width: 42px;
+  padding: 0;
+}
+.mono__icon-btn--shape-circle {
+  border-radius: 21px;
+}
+.mono__icon-btn--shape-round {
+  border-radius: 4px;
+}
+.mono__icon-btn--size-xs {
+  width: 32px;
+  height: 32px;
+}
+.mono__icon-btn--size-xs .mono__btn__content {
+  font-size: 14px;
+}
+.mono__icon-btn--size-sm {
+  width: 36px;
+  height: 36px;
+}
+.mono__icon-btn--size-sm .mono__btn__content {
+  font-size: 16px;
+}
+.mono__icon-btn--size-lg {
+  width: 48px;
+  height: 48px;
+}
