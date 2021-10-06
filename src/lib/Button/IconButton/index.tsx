@@ -5,9 +5,9 @@ import Button, { ButtonProps } from '../index'
 
 import styles from '../styles.module.css'
 
-interface IconButtonProps extends ButtonProps {}
+export interface IconButtonProps extends ButtonProps {}
 
-const IconButton = (props: IconButtonProps) => {
+export const IconButton = (props: IconButtonProps) => {
   const { className, size, shape, children, ...others } = props
 
   const classes = classNames(className, {

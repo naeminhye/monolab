@@ -21,7 +21,7 @@ const showPageSizeOptions = (
   return result
 }
 
-type PaginationProps = {
+export type PaginationProps = {
   /**
    * The first page's index, default: 1
    */
@@ -36,7 +36,7 @@ type PaginationProps = {
   style?: React.CSSProperties
 }
 
-const Pagination = (props: PaginationProps) => {
+export const Pagination = (props: PaginationProps) => {
   const {
     firstIndex = 1,
     total,
@@ -127,7 +127,7 @@ const Pagination = (props: PaginationProps) => {
             style={{ width: '100px' }}
             value={pageSizeOptions[0]}
             options={showPageSizeOptions(pageSizeOptions)}
-            onChange={(targetPageSize: number) => {
+            onChange={(targetPageSize: any) => {
               setPageSize(targetPageSize)
               onShowSizeChange && onShowSizeChange(currentPage, targetPageSize)
             }}
@@ -138,5 +138,4 @@ const Pagination = (props: PaginationProps) => {
   )
 }
 
-export { Pagination, PaginationProps }
 export default Pagination

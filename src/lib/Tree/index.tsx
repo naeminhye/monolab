@@ -313,5 +313,6 @@ const Tree = ({
   )
 }
 
-export { Tree, TreeNodeProps, TreeProps }
+export { Tree }
+export type { TreeNodeProps, TreeProps }
 export default Tree

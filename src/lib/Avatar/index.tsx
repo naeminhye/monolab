@@ -68,5 +68,6 @@ const Avatar = (props: AvatarProps) => {
   )
 }
 
-export { Avatar, AvatarProps, AvatarBorderProps }
+export { Avatar }
+export type { AvatarProps, AvatarBorderProps }
 export default Avatar

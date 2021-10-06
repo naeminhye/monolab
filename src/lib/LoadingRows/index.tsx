@@ -8,7 +8,7 @@ export type LoadingRowsProps = {
   loading?: boolean
 }
 
-const LoadingRows = ({ rows = 1, loading = true }) => {
+export const LoadingRows = ({ rows = 1, loading = true }) => {
   const classes = classNames({
     [styles['u-flex__cell']]: true,
     [styles['u-mg--sm']]: true,

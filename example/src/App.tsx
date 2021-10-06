@@ -1,7 +1,7 @@
 import React from 'react'
 
 import 'monolab/dist/index.css'
-import { Tree } from 'monolab'
+import { Tree, DatePicker } from 'monolab'
 import TableExample from './TableExample'
 
 // Sample Tree dataSource
@@ -34,6 +34,7 @@ const generateData = (_level: number, _preKey?: string, _tns?: any): any => {
 generateData(z)
 
 const App = () => {
+  const [date] = React.useState(new Date())
   return (
     <div>
       <Tree
@@ -45,6 +46,13 @@ const App = () => {
         checkable
       />
       <TableExample />
+      <DatePicker
+        bordered
+        style={{ width: 100 }}
+        format='M/D/YY'
+        onChange={() => {}}
+        value={date}
+      />
     </div>
   )
 }

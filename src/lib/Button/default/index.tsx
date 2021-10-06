@@ -3,27 +3,28 @@ import classNames from 'classnames'
 
 import styles from '../styles.module.css'
 
-type StatusType =
+export type StatusType =
+  | 'transparent'
   | 'default'
   | 'primary'
   | 'success'
   | 'info'
   | 'warning'
   | 'danger'
-type BreakPointType = 'xs' | 'sm' | 'md' | 'lg'
+export type BreakPointType = 'xs' | 'sm' | 'md' | 'lg'
 
-interface ButtonProps {
+export interface ButtonProps {
   className?: string
   style?: React.CSSProperties
-  children: string
-  shape?: 'square' | 'round'
+  children: string | React.ReactNode
+  shape?: 'square' | 'round' | 'circle'
   type?: StatusType
   size?: BreakPointType
   disabled?: boolean
   onClick?: any
 }
 
-const Button = (props: ButtonProps) => {
+export const Button = (props: ButtonProps) => {
   const {
     children,
     className,
@@ -44,10 +45,9 @@ const Button = (props: ButtonProps) => {
 
   return (
     <button className={classes} disabled={disabled} {...others}>
-      <div className={styles.mono__btn__content}>{children}</div>
+      <span className={styles.mono__btn__content}>{children}</span>
     </button>
   )
 }
 
-export { Button, ButtonProps }
 export default Button

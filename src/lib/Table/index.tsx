@@ -500,5 +500,6 @@ function Table<T>(props: TableProps<T>) {
   )
 }
 
-export { Table, TableProps, TableColumnProps, SortingRuleProps }
+export { Table }
+export type { TableProps, TableColumnProps, SortingRuleProps }
 export default Table

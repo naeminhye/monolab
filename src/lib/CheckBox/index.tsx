@@ -52,5 +52,6 @@ const CheckBox = (props: CheckBoxProps) => {
   )
 }
 
-export { CheckBox, CheckBoxProps }
+export { CheckBox }
+export type { CheckBoxProps }
 export default CheckBox

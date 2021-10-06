@@ -13,13 +13,13 @@ type DropdownOptionProps = {
 type DropdownProps = {
   options: Array<DropdownOptionProps>
   value: ValueProps
-  onChange: (value: ValueProps) => void
-  size: 'xs' | 'sm' | 'md' | 'lg'
+  onChange?: (value: ValueProps) => void
+  size?: 'xs' | 'sm' | 'md' | 'lg'
   className?: string
   style?: React.CSSProperties
 }
 const Dropdown = (props: DropdownProps) => {
-  const { options, className, value, onChange, size, style } = props
+  const { options, className, value, onChange, size = 'md', style } = props
 
   const selectedLabel: LabelProps = useMemo(() => {
     const selectedOption = options.find(
@@ -30,42 +30,42 @@ const Dropdown = (props: DropdownProps) => {
   }, [options, value])
 
   const classes = classNames(className, {
-    [styles.mono__Dropdown]: true,
-    [styles[`mono__Dropdown--size-${size}`]]: size && size !== 'md'
+    [styles.mono__dropdown]: true,
+    [styles[`mono__dropdown--size-${size}`]]: size && size !== 'md'
   })
 
   return (
     <div className={classes} style={style}>
-      <div className={styles['mono__Dropdown--current']} tabIndex={1}>
-        <div className={styles['mono__Dropdown--value']}>
+      <div className={styles['mono__dropdown--current']} tabIndex={1}>
+        <div className={styles['mono__dropdown--value']}>
           <input
-            className={styles['mono__Dropdown--input']}
+            className={styles['mono__dropdown--input']}
             type='radio'
             id={`${value}`}
-            defaultValue={2}
-            name='Ben'
             aria-label={`${selectedLabel}`}
-            // defaultChecked='checked'
+            checked
           />
-          <div className={styles['mono__Dropdown--input-text']}>{}</div>
+          <div className={styles['mono__dropdown--input-text']}>
+            {selectedLabel}
+          </div>
         </div>
         <img
-          className={styles.mono__Dropdown__icon}
+          className={styles.mono__dropdown__icon}
           src='http://cdn.onlinewebfonts.com/svg/img_295694.svg'
           alt='Arrow Icon'
           aria-hidden='true'
         />
       </div>
-      <ul className={styles.mono__Dropdown__list}>
+      <ul className={styles.mono__dropdown__list}>
         {options.map((option, index) => (
           <li
             key={index}
             onClick={() => {
-              onChange(option.value)
+              onChange && onChange(option.value)
             }}
           >
             <label
-              className={styles['mono__Dropdown--option']}
+              className={styles['mono__dropdown--option']}
               htmlFor={`${option.value}`}
             >
               {`${option.label}`}
@@ -77,5 +77,6 @@ const Dropdown = (props: DropdownProps) => {
   )
 }
 
-export { Dropdown, DropdownProps, DropdownOptionProps }
+export { Dropdown }
+export type { DropdownProps, DropdownOptionProps }
 export default Dropdown

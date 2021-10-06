@@ -1,6 +1,7 @@
 .mono__input--wrapper {
   position: relative;
   font-family: Inconsolata, Montserrat, Arial;
+  min-width: fit-content;
 }
 .mono__input--wrapper .mono__input {
   font-family: Inconsolata, Montserrat, Arial;
@@ -32,13 +33,15 @@
 }
 .mono__input--wrapper .mono__input--prefix {
   position: absolute;
-  top: 25%;
   left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .mono__input--wrapper .mono__input--suffix {
   position: absolute;
-  top: 25%;
   right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .mono__textarea--wrapper {
   font-family: Inconsolata, Montserrat, Arial;

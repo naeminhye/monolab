@@ -10,14 +10,17 @@
 }
 .mono__dropdown--size-xs .mono__dropdown--input-text {
   line-height: 32px;
+  height: 32px;
 }
 .mono__dropdown--size-xs .mono__dropdown__list {
   top: 30px;
 }
 .mono__dropdown--size-sm {
+  height: 36px;
   line-height: 36px;
 }
 .mono__dropdown--size-lg {
+  height: 48px;
   line-height: 48px;
 }
 .mono__dropdown--current {

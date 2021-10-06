@@ -79,6 +79,18 @@
 .mono__btn--type-danger:active {
   background-color: #8f0700;
 }
+.mono__btn--type-transparent {
+  background-color: transparent;
+}
+.mono__btn--type-transparent .mono__btn__content {
+  color: #000;
+}
+.mono__btn--type-transparent:hover {
+  background-color: transparent;
+}
+.mono__btn--type-transparent:active {
+  background-color: transparent;
+}
 .mono__btn--shape-round {
   border-radius: 50px;
 }

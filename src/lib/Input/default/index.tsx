@@ -10,7 +10,7 @@ export type InputProps = Omit<
   className?: string
   style?: React.CSSProperties
   value: string | number
-  onChange?: () => void
+  onChange?: React.ChangeEventHandler<HTMLInputElement>
   bordered?: boolean
   allowClear?: boolean
   disabled?: boolean
@@ -19,7 +19,7 @@ export type InputProps = Omit<
   label?: string
 }
 
-const Input = (props: InputProps) => {
+export const Input = (props: InputProps) => {
   const {
     className,
     prefix,
@@ -28,6 +28,7 @@ const Input = (props: InputProps) => {
     bordered = false,
     disabled = false,
     style,
+    onChange,
     ...others
   } = props
 
@@ -41,6 +42,7 @@ const Input = (props: InputProps) => {
     <div className={styles['mono__input--wrapper']}>
       <input
         {...others}
+        onChange={onChange}
         disabled={disabled}
         className={classes}
         style={{

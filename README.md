@@ -1,4 +1,4 @@
-# @monolab-ui/core
+# @monolab-ui/components
 
 > React UI Components by Monolab
 
@@ -7,15 +7,15 @@
 ## Install
 
 ```bash
-npm install --save @monolab-ui/core
-// or yarn add @monolab-ui/core
+npm install --save @monolab-ui/components
+// or yarn add @monolab-ui/components
 ```
 
 ## Usage
 
 ```javascript
-import '@monolab-ui/core/dist/index.css'
-import { Button } from '@monolab-ui/core'
+import '@monolab-ui/components/dist/index.css'
+import { Button } from '@monolab-ui/components'
 
 export default function YourComponent() {
   return <Button>Click me</Button>

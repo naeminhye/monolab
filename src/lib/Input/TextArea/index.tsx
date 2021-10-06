@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 import styles from '../styles.module.css'
 
-interface TextAreaProps
+export interface TextAreaProps
   extends Omit<
     React.HTMLAttributes<HTMLTextAreaElement>,
     'value' | 'className' | 'style'
@@ -17,7 +17,7 @@ interface TextAreaProps
   resize?: 'none' | 'vertical' | 'horizontal' | 'block' | 'inline' | 'both'
 }
 
-const TextArea = (props: TextAreaProps) => {
+export const TextArea = (props: TextAreaProps) => {
   const {
     className,
     value,
@@ -52,5 +52,4 @@ const TextArea = (props: TextAreaProps) => {
   )
 }
 
-export { TextArea, TextAreaProps }
 export default TextArea

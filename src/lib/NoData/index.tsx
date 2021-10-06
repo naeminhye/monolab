@@ -10,7 +10,8 @@ export type NoDataProps = {
   className?: string
   style?: React.CSSProperties
 }
-const NoData = (props: NoDataProps) => {
+
+export const NoData = (props: NoDataProps) => {
   const { className, text = 'No Data', icon, style } = props
 
   const classes = classNames(className, {
